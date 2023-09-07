@@ -26,7 +26,7 @@ exports.addTask = async (req, res) => {
 
     // If validation succeeds, create a new task
     const { name, category, description, priority, duration } = req.body;
-    const Task = await Task.insertOne({
+    const createdTask = await Task.insertOne({
       name,
       category,
       description,
